@@ -14,7 +14,6 @@ header, footer, section, aside, main{
         padding: 1em;
 }
 
-
 header, footer{
         color: white;
         background-color:  #1976D2;
@@ -22,6 +21,8 @@ header, footer{
 }
 
 aside{
+        display: flex;
+        justify-content: center;
         color: #212121;
         background-color: #BBDEFB;
         flex-grow: 3;
@@ -29,6 +30,8 @@ aside{
 section{
         background-color: #FF4081;
         color: white;
+        flex-grow: 1;
+        margin: 0.5em;
 }
 
 main{
@@ -60,18 +63,10 @@ div.row{
         flex-direction: column;
 }
 
-aside{
-        display: flex;
-        justify-content: center;
-        color: #212121;
-        background-color: #BBDEFB;
-        flex-grow: 3;
-}
-section{
-        background-color: #FF4081;
-        color: white;
-        flex-grow: 1;
-        margin: 0.5em;
+@media screen and (max-width: 600px) {
+  div.row{
+                flex-direction: column;
+        }
 }
 
 </style>
@@ -80,7 +75,6 @@ section{
 <header>Header</header>
 <div class="row">
                 <aside class="col">
-                Aside
                 <section>Section 1</section>
                 <section>Section 2</section>
         </aside>
